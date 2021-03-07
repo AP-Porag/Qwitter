@@ -189,7 +189,7 @@ export default {
         })
         .catch((error) => {
           // The document probably doesn't exist.
-          console.error("Error updating document: ", error);
+          //console.error("Error updating document: ", error);
         });
     },
     deleteQweet(qweet) {
