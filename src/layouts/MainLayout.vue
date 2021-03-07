@@ -40,6 +40,7 @@
       <q-list>
         <q-item
           v-for="menu in menus"
+          :key="menu.name"
           clickable
           v-ripple
           :to="menu.link"
@@ -59,7 +60,6 @@
       v-model="right"
       side="right"
       bordered
-      :width="283"
     >
       <!-- drawer content -->
       <q-input
@@ -86,6 +86,7 @@
         >
           <q-item
           v-for="news in newses"
+          :key="news.id"
           >
             <q-item-section>
               <q-item-label overline class="text-grey">{{news.category}}</q-item-label>
@@ -149,7 +150,9 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view/>
+      <keep-alive>
+        <router-view/>
+      </keep-alive>
     </q-page-container>
 
   </q-layout>
@@ -170,9 +173,9 @@ export default {
       left: false,
       right: false,
       newses: [
-        {category:'education',title: 'Something happen very good !', content:'Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.',time:'15 min ago', link: ''},
-        {category:'politics',title: 'Something happen very amazing !', content:'Primary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.',time:'10 min ago', link: ''},
-        {category:'hollywood',title: 'Something happen very nice !', content:'top line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.',time:'5 min ago', link: ''},
+        {id:'hgshjnj458475ahjz',category:'education',title: 'Something happen very good !', content:'Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.',time:'15 min ago', link: ''},
+        {id:'ajohoijf8958df47d',category:'politics',title: 'Something happen very amazing !', content:'Primary line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.',time:'10 min ago', link: ''},
+        {id:'aut5jy18947wer789',category:'hollywood',title: 'Something happen very nice !', content:'top line text. Lorem ipsum dolor sit amet, consectetur adipiscit elit.',time:'5 min ago', link: ''},
       ],
       users:[
         {id:'shfsjjsohfhs56564',name:'emily',profile:'emilyQwitter',avatar:'https://cdn.quasar.dev/img/avatar6.jpg'},
