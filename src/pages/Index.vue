@@ -112,7 +112,10 @@
 
 <script>
 import {formatDistance} from 'date-fns'
-import database from "boot/firebase";
+import database from "src/boot/firebase";
+// import 'firebase/firestore';
+// const database = firebase.firestore();
+
 
 export default {
   name: 'PageHome',
@@ -207,7 +210,7 @@ export default {
   },
   mounted() {
 
-    database.collection('qweets')
+    this.$db.collection('qweets')
       .orderBy('date')
       .onSnapshot((snapshot) => {
         snapshot.docChanges().forEach((change) => {

@@ -1,6 +1,7 @@
-import firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/firestore";
+import firebase from 'firebase/app'
+import 'firebase/app'
+import 'firebase/auth'
+import 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyABzst8sVhajnOtrsvu9q4Z_OV02B7DzFQ",
@@ -11,8 +12,9 @@ const firebaseConfig = {
   appId: "1:430710059483:web:c165c5552e59a02dc1b7fe"
 };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-let database = firebase.firestore();
 
-export default database
+export default async ( { app, router, Vue } ) => {
+  firebase.initializeApp(firebaseConfig);
+  Vue.prototype.$db = firebase.firestore();
+  Vue.prototype.$auth= firebase.auth();
+}
