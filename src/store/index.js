@@ -2,6 +2,11 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 // import example from './module-example'
+// import state from './module-example/state'
+// import mutations from './module-example/mutations'
+// import actions from './module-example/actions'
+// import getters from './module-example/getters'
+ import index from './module-example/index'
 
 Vue.use(Vuex)
 
@@ -18,6 +23,11 @@ export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
     modules: {
       // example
+      // state,
+      // mutations,
+      // actions,
+      // getters
+      index
     },
 
     // enable strict mode (adds overhead!)

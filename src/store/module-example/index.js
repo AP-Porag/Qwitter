@@ -1,3 +1,4 @@
+//import{database,auth} from 'boot/firebase'
 import state from './state'
 import * as getters from './getters'
 import * as mutations from './mutations'

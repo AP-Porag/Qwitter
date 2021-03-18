@@ -1,0 +1,17 @@
+{
+  "users": {
+    "id1": {
+      "name": "Razvan Stoenescu",
+      "avatar": "https://cdn.quasar.dev/team/razvan_stoenescu.jpeg",
+      "message": "I\\'m working on Quasar!",
+      "status":true
+    },
+    "id2": {
+      "name": "Dan Popescu",
+      "avatar": "https://cdn.quasar.dev/team/dan_popescu.jpg",
+      "message": "I'm working on Quasar!",
+      "status":false
+    }
+  },
+  "chats": {}
+}
